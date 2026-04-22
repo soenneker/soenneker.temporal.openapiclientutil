@@ -1,20 +1,19 @@
 using Soenneker.Temporal.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Temporal.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class TemporalOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class TemporalOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly ITemporalOpenApiClientUtil _openapiclientutil;
 
-    public TemporalOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public TemporalOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<ITemporalOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
