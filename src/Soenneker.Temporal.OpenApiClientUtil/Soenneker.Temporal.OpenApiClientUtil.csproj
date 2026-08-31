@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>A thread-safe utility for obtaining Temporal's OpenApiClient singleton.</Description>
+        <Description>Provides lazily initialized, cached access to Temporal's generated OpenAPI client.</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Temporal.OpenApiClientUtil</AssemblyName>
@@ -41,7 +41,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.41" />
         <PackageReference Include="Soenneker.Temporal.HttpClients" Version="4.0.94" />
         <PackageReference Include="Soenneker.Temporal.OpenApiClient" Version="4.0.41" />
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.825" />

@@ -6,7 +6,7 @@ using Soenneker.Temporal.OpenApiClientUtil.Abstract;
 namespace Soenneker.Temporal.OpenApiClientUtil.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI client utility for dependency injection.
+/// Registers cached access to the Temporal OpenAPI client.
 /// </summary>
 public static class TemporalOpenApiClientUtilRegistrar
 {
