@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Temporal.OpenApiClientUtil;
 
+/// <inheritdoc cref="ITemporalOpenApiClientUtil" />
 public sealed class TemporalOpenApiClientUtil : ITemporalOpenApiClientUtil
 {
     private readonly AsyncSingleton<TemporalOpenApiClient> _client;
